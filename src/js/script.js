@@ -218,7 +218,7 @@
 
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget();
-      thisCartProduct.initActions();
+      // thisCartProduct.initActions();
 
       
     }
@@ -248,31 +248,17 @@
     }
     
 
-    remove(){
-      const thisCartProduct = this;
-
-      const event = new CustomEvent('remove', {
-        bubbles: true,
-        detail: {
-          cartProduct: thisCartProduct,
-        },
-      });
-
-      thisCartProduct.dom.wrapper.dispatchEvent(event);
-    }
-
-    // initActions(){
+    // remove(){
     //   const thisCartProduct = this;
 
-    //   thisCartProduct.dom.edit('click', function(event){
-    //     event.preventDefault();
+    //   const event = new CustomEvent('remove', {
+    //     bubbles: true,
+    //     detail: {
+    //       cartProduct: thisCartProduct,
+    //     },
     //   });
-    //   thisCartProduct.dom.remove('click', function (event){
-    //     event.preventDefault();
-    //     thisCartProduct.remove();
-        
-    //   });
-    //   console.log('delete', thisCartProduct.remove());
+
+    //   thisCartProduct.dom.wrapper.dispatchEvent(event);
     // }
 
     
